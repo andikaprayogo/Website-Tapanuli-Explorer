@@ -1,0 +1,88 @@
+/* Reset some default styles */
+body, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.signup-page {
+    background-image: url('background login.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Optional, membuat latar belakang tetap saat gulir */
+}
+
+.signup-container {
+    text-align: center;
+    margin: 50px auto;
+    width: 300px;
+    backdrop-filter: blur(10px);
+    padding: 60px;
+    border-radius: 35px;
+}
+
+.signup-container h1 {
+    color: #144083;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column; /* Mengatur kolom Username dan Email menjadi lonjong */
+    align-items: left;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+   
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: calc(100% - 30px); /* Lebar disesuaikan dengan kolom Password */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.password-input-container {
+    position: relative;
+    flex: 2;
+}
+
+#password {
+    width: calc(100% - 30px);
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.eye-icon {
+    position: absolute;
+    width: 50px;
+    right: 15px;
+    top: 2px;
+    cursor: pointer;
+}
+
+/* Style the Sign Up button */
+button {
+    border: 2px solid #043f8b;
+    color: #043f8b;
+    background-color: transparent;
+    padding: 10px 120px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: #043f8b;
+    color: #fff;
+}
+ .login-link {
+    padding: 10px;
+    color: #fff;
+ }

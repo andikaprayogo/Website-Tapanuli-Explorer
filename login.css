@@ -1,0 +1,86 @@
+/* Reset some default styles */
+body, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Style the background */
+body {
+    background-image: url('background login.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Optional, membuat latar belakang tetap saat gulir */
+}
+
+.login-container {
+    text-align: center;
+    margin: 50px auto;
+    width: 300px;
+    backdrop-filter: blur(10px);
+    padding: 75px;
+    border-radius: 35px;
+}
+
+.login-container h1 {
+    color: #144083;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    text-align: left;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+}
+
+.forgot-password {
+    float: right;
+    
+    color: rgb(250, 250, 250);
+    cursor: pointer;
+}
+
+.signup-link {
+    margin-top: 5px;
+    text-align: center;
+}
+
+.signup-link a {
+    color: rgb(4, 48, 131);
+    text-decoration: none;
+}
+
+/* Style the Login button */
+button {
+    border: 2px solid #043f8b; /* Warna biru pada border */
+    color: #043f8b; /* Warna teks */
+    background-color: transparent; /* Latar belakang transparan */
+    padding: 10px 120px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: #043f8b; /* Warna latar belakang saat tombol dihover */
+    color: #fff; /* Warna teks saat tombol dihover */
+}
+
+
+
+.forgot-password {
+    padding: 10px;
+}
+
+
+
+

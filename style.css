@@ -1,0 +1,201 @@
+
+
+
+.navbar {
+    transition: background-color 0.3s ease, padding 0.3s ease; /* Tambahkan efek transisi untuk warna latar belakang dan padding */
+}
+
+.navbar.scrolled {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 10px 20px; /* Sesuaikan dengan padding yang diinginkan saat discroll */
+}
+
+.navbar-brand img {
+    transition: width 0.3s ease; /* Tambahkan efek transisi untuk ukuran logo */
+}
+
+.navbar.scrolled .navbar-brand img {
+    width: 80px; /* Sesuaikan dengan ukuran yang diinginkan saat discroll */
+}
+
+.navbar-nav {
+    margin-left: auto; /* Geser menu ke kanan */
+}
+
+.navbar-nav .nav-item {
+    margin-right: 15px; /* Jarak antar menu */
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff !important; /* Warna teks menu */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #00f0f8 !important; /* Warna teks menu saat kursor mengarah pada menu */
+}
+
+
+.bg-image {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: brightness(0.6);
+}
+
+
+/* Style the header */
+
+
+
+
+
+
+
+
+
+
+
+.login {
+    
+    display: flex;
+    align-items: center;
+    
+}
+
+.user-icon {
+    
+    margin-right: 5px;
+}
+
+.user-icon img {
+    
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+.login a {
+    position: relative;
+    padding: 5px 20px;
+    color: rgba(0, 0, 0, 0.7); /* Menyesuaikan opasitas dengan rgba */
+    border: none;
+    cursor: pointer;
+ 
+    backdrop-filter: blur(5px); /* Menambahkan efek blur pada border */
+ 
+}
+
+.login a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.7); /* Menyesuaikan opasitas dengan rgba */
+    border-radius: 20px;
+    top: 0;
+    left: 0;
+    z-index: -1;
+   
+}
+
+
+
+
+/* CSS untuk tata letak tombol panah */
+.carousel-control-prev,
+.carousel-control-next {
+    width: auto;
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.carousel-control-prev {
+    left: 20px;
+}
+
+.carousel-control-next {
+    right: 20px;
+}
+
+
+/* CSS untuk tombol panah yang disesuaikan */
+.custom-arrow {
+    font-size: 2rem; /* Sesuaikan ukuran tombol panah */
+    width: 50px; /* Sesuaikan lebar tombol panah */
+    height: 50px; /* Sesuaikan tinggi tombol panah */
+    background-color: rgba(0, 0, 0, 0.5); /* Sesuaikan warna latar belakang tombol panah */
+    border: none;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%; /* Tempatkan di tengah vertikal */
+    transform: translateY(-50%);
+}
+
+.custom-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Warna latar belakang saat tombol panah dihover */
+}
+
+/* CSS untuk menetapkan posisi tombol panah */
+.carousel-control-prev {
+    left: 20px; /* Sesuaikan posisi tombol panah sebelumnya */
+}
+
+.carousel-control-next {
+    right: 20px; /* Sesuaikan posisi tombol panah berikutnya */
+}
+
+
+/* CSS untuk mengatur posisi hak cipta di tengah footer */
+.copyright {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-bottom: 0; /* Hilangkan margin bawah agar tidak ada space ekstra */
+}
+
+.dark-image {
+    filter: brightness(50%); /* Nilai 0.7 dapat disesuaikan untuk mengatur seberapa gelap gambar */
+}
+
+
+.card {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-img {
+    transition: transform 0.5s ease;
+}
+
+.card:hover .card-img {
+    transform: scale(1.1);
+}
+
+.card-img-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: white;
+}
+
+
+
+
+
+
+
+

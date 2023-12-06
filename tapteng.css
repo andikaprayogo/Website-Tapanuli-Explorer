@@ -1,0 +1,176 @@
+.navbar {
+    transition: background-color 0.3s ease, padding 0.3s ease; /* Tambahkan efek transisi untuk warna latar belakang dan padding */
+}
+
+.navbar.scrolled {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 10px 20px; /* Sesuaikan dengan padding yang diinginkan saat discroll */
+}
+
+.navbar-brand img {
+    transition: width 0.3s ease; /* Tambahkan efek transisi untuk ukuran logo */
+}
+
+.navbar.scrolled .navbar-brand img {
+    width: 80px; /* Sesuaikan dengan ukuran yang diinginkan saat discroll */
+}
+
+.navbar-nav {
+    margin-left: auto; /* Geser menu ke kanan */
+}
+
+.navbar-nav .nav-item {
+    margin-right: 15px; /* Jarak antar menu */
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff !important; /* Warna teks menu */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #00f0f8 !important; /* Warna teks menu saat kursor mengarah pada menu */
+}
+
+
+.destination-link {
+    text-decoration: none;
+    color: #333; /* Warna teks default */
+}
+
+.destination-link:hover {
+    text-decoration: none; /* Hilangkan garis bawah saat hover */
+}
+
+.grayscale-on-hover:hover {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease-in-out;
+}
+
+.fade-on-hover:hover {
+    color: #888; /* Warna teks yang memudar */
+    transition: color 0.3s ease-in-out;
+}
+
+
+
+.login {
+    
+    display: flex;
+    align-items: center;
+    
+}
+.user-icon {
+    
+    margin-right: 5px;
+}
+
+.user-icon img {
+    
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+.login a {
+    position: relative;
+    padding: 5px 20px;
+    color: rgba(0, 0, 0, 0.7); /* Menyesuaikan opasitas dengan rgba */
+    border: none;
+    cursor: pointer;
+ 
+    backdrop-filter: blur(5px); /* Menambahkan efek blur pada border */
+ 
+}
+
+.login a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.7); /* Menyesuaikan opasitas dengan rgba */
+    border-radius: 20px;
+    top: 0;
+    left: 0;
+    z-index: -1;
+   
+}
+
+
+
+
+.header-image {
+    position: relative;
+    text-align: center;
+}
+
+.header-image img {
+    width: 100%;
+    height: auto;
+    filter: brightness(50%);
+}
+
+.header-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+.header-text h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.header-text p {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+body {
+    background-color: #f8f9fa; /* Warna latar belakang Bootstrap */
+
+
+    
+}
+.container {
+    margin-top: 20px;
+}
+.destination-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: #ffffff; /* Warna latar belakang putih */
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.col-md-8 {
+    order: -1; /* Menempatkan container destinasi sebelum container pencarian */
+}
+.card {
+    background-color: #ffffff; /* Warna latar belakang putih pada kotak destinasi */
+    box-shadow: 0 0 10px 1px rgba(37, 73, 214, 0.18); /* Bayangan hitam di sepanjang pinggir garis kotak destinasi */
+}
+.card-title {
+    font-weight: bold; /* Memberikan ketebalan pada judul destinasi */
+}
+.card-text {
+    margin-bottom: 0; /* Menghilangkan margin bawah pada teks lokasi */
+}
+
+/* Additional styles for better mobile responsiveness */
+@media (max-width: 768px) {
+    .header-text h1 {
+        font-size: 1.8em;
+    }
+
+    .header-text p {
+        font-size: 1em;
+    }
+
+    .destination-container {
+        margin-top: 10px;
+    }
+}
