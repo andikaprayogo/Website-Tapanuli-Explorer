@@ -1,13 +1,17 @@
 <?php
+$host = "localhost";
+$user = "postgres";
+$pass = "andikamira23";
+$db = "test_db";
 
-$sname= "localhost";
-$unmae= "root";
-$password = "";
+try {
+    // Connect to PostgreSQL using PDO
+    $con = new PDO("pgsql:dbname=$db;host=$host", $user, $pass);
 
-$db_name = "test_db";
-
-$conn = mysqli_connect($sname, $unmae, $password, $db_name);
-
-if (!$conn) {
-	echo "Connection failed!";
+    // Set the PDO error mode to exception
+    $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    echo "Connection failed: " . $e->getMessage();
+    exit(); // Exit the script if the connection fails
 }
+?>

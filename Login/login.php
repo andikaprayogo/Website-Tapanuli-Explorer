@@ -27,16 +27,27 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
             exit();
         }
 
-        // Hashing the password
-        $pass = md5($pass);
+        // Hashing the password using bcrypt
+        $pass = password_hash($pass, PASSWORD_BCRYPT);
 
-        $sql = "SELECT * FROM users WHERE email='$email' AND password='$pass'";
+        // Connect to PostgreSQL using PDO
+        include "db_conn.php"; // Gantilah dengan nama file koneksi PostgreSQL Anda
 
-        $result = mysqli_query($conn, $sql);
+        try {
+            $conn = new PDO("pgsql:dbname=$db;host=$host", $user, $pass);
+            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        } catch (PDOException $e) {
+            echo "Connection failed: " . $e->getMessage();
+            exit();
+        }
 
-        if (mysqli_num_rows($result) === 1) {
-            $row = mysqli_fetch_assoc($result);
-            if ($row['email'] === $email && $row['password'] === $pass) {
+        $stmt = $conn->prepare("SELECT * FROM users WHERE email=:email");
+        $stmt->bindParam(':email', $email);
+        $stmt->execute();
+
+        if ($stmt->rowCount() === 1) {
+            $row = $stmt->fetch(PDO::FETCH_ASSOC);
+            if (password_verify($pass, $row['password'])) {
                 $_SESSION['email'] = $row['email'];
                 $_SESSION['name'] = $row['name'];
                 $_SESSION['id'] = $row['id'];
